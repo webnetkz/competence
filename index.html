@@ -1,0 +1,214 @@
+<!DOCTYPE html>
+<html lang="<?=LANGUAGE_ID ?>">
+<head>
+    <meta charset="<?=LANG_CHARSET?>" />
+    <meta http-equiv="X-UA-Compatible" content="IE=edge,chrome=1" />
+    <title>
+        Title
+    </title>
+    <meta content='width=device-width, initial-scale=1.0, maximum-scale=1.0, user-scalable=0, shrink-to-fit=no' name='viewport' />
+    <link rel="stylesheet" type="text/css" href="https://fonts.googleapis.com/css?family=Roboto:300,400,500,700|Roboto+Slab:400,700|Material+Icons" />
+    <link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/font-awesome/latest/css/font-awesome.min.css">
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.4.0/css/all.min.css">
+    <link rel="stylesheet" href="./assets/css/styles.css">
+    <link rel="stylesheet" href="./assets/css/mobile.css">
+
+    <link rel="stylesheet" href="bodyStyle.css">
+</head>
+<body class="bd-docs">
+  
+<div class="uchet-header">
+  
+    <div class="uchet-top-header">
+      <button class="uchet-change-lang">Қаз</button>
+      <div class="uchet-sign-block">
+        <a href="https://id.uchet.kz/account/login/" class="uchet-sign-link uchet-signin">Войти</a>
+        <a href="https://id.uchet.kz/account/registration/" class="uchet-sign-link">Регистрация</a>
+      </div>
+    </div>
+    
+    <header>
+    
+      <a class="uchet-logotype" href="/">
+          <img src="./assets/img/uchet_edu.svg">
+      </a>
+      <div class="uchet-show-more-services">
+        <img src="./assets/img/cubes.svg">
+        Сервисы
+
+        <div>
+          <img src="./assets/img/services/buh.svg" onclick="location.href = 'https://buh.uchet.kz/'">
+          <img src="./assets/img/services/kassa.svg" onclick="location.href = 'https://ukassa.kz/'">
+          <img src="./assets/img/services/edo.svg" onclick="location.href = 'https://edo.uchet.kz/'">
+          <img src="./assets/img/services/edu.svg" onclick="location.href = 'https://profitraining.kz/'">
+          <img src="./assets/img/services/pk.svg" onclick="location.href = 'https://pk.uchet.kz/'">
+          <img src="./assets/img/services/pob.svg" onclick="location.href = 'https://pob.uchet.kz/'">
+          <img src="./assets/img/services/franc.svg" onclick="location.href = 'https://uchet.kz/fran/'">
+          <img src="./assets/img/services/consult.svg" onclick="location.href = 'https://uchet.kz/lp/outsource/'">
+          <img src="./assets/img/services/audit.svg" onclick="location.href = 'https://audit.uchet.kz/'">
+        </div>
+      </div>  
+        
+      <div class="uchet-menu" status="close">
+        <i class="fa-solid fa-bars uchet-menu-burger" onclick="showMenu(this);"></i>
+
+        <menu>
+          <a href="index.html" class="uchet-button uchet-button-active">Главная</a>
+          <a href="one.html" class="uchet-button">Первый тур</a>
+          <a href="two.html" class="uchet-button">Второй тур</a>
+          <a href="index.html" class="uchet-button">Контакты</a>
+        </menu>
+      </div>
+
+    </header>
+</div>
+
+<div class="uchet-slider">
+    <i class="fas fa-chevron-left uchet-slider-arrow uchet-slider-arrow-left"></i>
+    <i class="fas fa-chevron-right uchet-slider-arrow uchet-slider-arrow-right"></i>
+    <div class="uchet-slider-content">
+        <div class="uchet-slider-item" style="background-image: url('https://rsv.ru/blog/wp-content/uploads/2021/09/obuchenie-personala-918x516.jpeg');">
+          <h1>Узнай подробности и прими участие</h1>
+          <button class="uchet-button" onclick="location.href = 'one.html'">Подробнее</button>
+        </div>
+        <div class="uchet-slider-item" style="background-image: url('https://s0.rbk.ru/v6_top_pics/media/img/7/76/755752832718767.jpg');">
+          <h1>Узнай подробности и прими участие</h1>
+          <button class="uchet-button" onclick="location.href = 'one.html'">Подробнее</button>
+        </div>
+        <div class="uchet-slider-item" style="background-image: url('https://www.unicraft.org/wp-content/uploads/2020/07/8611-1568x1045.jpg');">
+          <h1>Узнай подробности и прими участие</h1>
+          <button class="uchet-button" onclick="location.href = 'one.html'">Подробнее</button>
+        </div>
+      </div>
+    <div class="uchet-slider-dots"></div>
+</div>
+
+<div class="uchet-subscribe">
+  <p>Начните соревнование на право быть Лучшим Бухгалтером Казахстана</p>
+  <a class="uchet-button" href="one.html">Принять участие!</a>
+</div>
+
+<div class="uchet-countdown">
+  <div class="uchet-countdown-block">
+    <div class="uchet-number" id="days"></div>
+    <div class="uchet-label">Дней</div>
+  </div>
+  <div class="uchet-countdown-block">
+    <div class="uchet-number" id="hours"></div>
+    <div class="uchet-label">Часов</div>
+  </div>
+  <div class="uchet-countdown-block">
+    <div class="uchet-number" id="minutes"></div>
+    <div class="uchet-label">Минут</div>
+  </div>
+  <div class="uchet-countdown-block">
+    <div class="uchet-number" id="seconds"></div>
+    <div class="uchet-label">Секунд</div>
+  </div>
+</div>
+
+<div class="uchet-about-competence">
+  <h2>О Конкурсе</h2>
+  <p>Осенью 2018 года состоится самое яркое и значимое событие в мире бухгалтерии Казахстана – ежегодный конкурс “Лучший БУХГАЛТЕР Казахстана”.</p>
+  <p>Несколько тысяч бухгалтеров примут активное участие в конкурсной борьбе за титул лучшего.</p>
+  <p>За этим событием следит весь бухгалтерский мир. Премия победителям будет вручаться в рамках конференции для бухгалтеров.</p>
+
+  <div class="uchet-about-icons">
+    <div>
+      <i class="fa-solid fa-question"></i>
+      <div>
+        <h3>Первый тур</h3>
+        <p>октябрь - декабрь</p>
+      </div>
+    </div>
+    <div>
+      <i class="fa-solid fa-pen"></i>
+      <div>
+        <h3>Второй тур</h3>
+        <p>январь - февраль</p>
+      </div>
+    </div>
+    <div>
+      <i class="fa-solid fa-gift"></i>
+      <div>
+        <h3>Награждение</h3>
+        <p>Конференция Учёт`23</p>
+      </div>
+    </div>
+  </div>
+</div>
+
+<div class="uchet-partners">
+  <h1>Спонсоры и партнеры</h1>
+  <p>Компании которые поддерживают и освещают Конкурс "Лучший бухгалтер Казахстана 23</p>
+  <div>
+    <div class="uchet-partner">
+      <img src="https://uchet.kz/bitrix/templates/abuh/images/deloitte_m.png">
+      <div>
+        <h4>Делойт в Казахстане</h4>
+        <p>Аудит, Консалтинг</p>
+      </div>
+    </div>
+
+    <div class="uchet-partner">
+      <img src="https://uchet.kz/bitrix/templates/abuh/images/nurkz.gif">
+      <div>
+        <h4>NUR.kz</h4>
+        <p>Главный информационный партнер</p>
+      </div>
+    </div>
+
+    <div class="uchet-partner">
+      <img src="https://uchet.kz/bitrix/templates/abuh/images/prodengi.png">
+      <div>
+        <h4>Prodengi.kz</h4>
+        <p>инфо-партнер</p>
+      </div>
+    </div>
+
+    <div class="uchet-partner">
+      <img src="http://uchet.kz/premiya/img/gazeta_m.png">
+      <div>
+        <h4>Gazeta.kz</h4>
+        <p>инфо-партнер</p>
+      </div>
+    </div>
+
+    <div class="uchet-partner">
+      <img src="http://uchet.kz/premiya/img/total_logo.png">
+      <div>
+        <h4>Total.kz</h4>
+        <p>инфо-партнер</p>
+      </div>
+    </div>
+  </div>
+</div>
+
+<div class="uchet-modal-container" style="display: none;">
+  <div class="uchet-modal showElement">
+    <div class="uchet-modal-title">
+      <h1>Title</h1>
+      <i class="fa-sharp fa-solid fa-xmark" onclick="showModal()"></i>
+    </div>
+    <div class="uchet-modal-content">
+      Content
+    </div>
+  </div>
+</div>
+
+<footer class="uchet-footer">
+<div class="uchet-to-top" onclick="window.scrollTo({top: 0, left: 0, behavior: 'smooth'});">↑</div>
+<div class="uchet-shared">
+  <i class="fa-brands fa-facebook" onclick="location.href = 'https://www.facebook.com/Uchet.kz/'"></i>
+  <i class="fa-brands fa-youtube" onclick="location.href = 'https://www.youtube.com/user/uchetkz/videos'"></i>
+  <i class="fa-brands fa-square-instagram" onclick="location.href = 'https://www.instagram.com/uchet.kz/'"></i>
+  <i class="fa-brands fa-telegram" onclick="location.href = 'https://t.me/uchet_kz'"></i>
+</div>
+<span class="text-muted font-weight-bold">2006 – 2023 © </span>
+<a href="https://uchet.kz" target="_blank">Учёт™</a>
+</footer>
+
+<script src="./assets/js/main.js"></script>
+
+</body>
+</html>

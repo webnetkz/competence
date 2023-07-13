@@ -1,0 +1,184 @@
+<!DOCTYPE html>
+<html lang="<?=LANGUAGE_ID ?>">
+<head>
+    <meta charset="<?=LANG_CHARSET?>" />
+    <meta http-equiv="X-UA-Compatible" content="IE=edge,chrome=1" />
+    <title>
+        One tour
+    </title>
+    <meta content='width=device-width, initial-scale=1.0, maximum-scale=1.0, user-scalable=0, shrink-to-fit=no' name='viewport' />
+    <link rel="stylesheet" type="text/css" href="https://fonts.googleapis.com/css?family=Roboto:300,400,500,700|Roboto+Slab:400,700|Material+Icons" />
+    <link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/font-awesome/latest/css/font-awesome.min.css">
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.4.0/css/all.min.css">
+    <link rel="stylesheet" href="./assets/css/styles.css">
+    <link rel="stylesheet" href="./assets/css/mobile.css">
+
+    <link rel="stylesheet" href="bodyStyle.css">
+</head>
+<body class="bd-docs">
+  
+<div class="uchet-header">
+  
+    <div class="uchet-top-header">
+      <button class="uchet-change-lang">Қаз</button>
+      <div class="uchet-sign-block">
+        <a href="https://id.uchet.kz/account/login/" class="uchet-sign-link uchet-signin">Войти</a>
+        <a href="https://id.uchet.kz/account/registration/" class="uchet-sign-link">Регистрация</a>
+      </div>
+    </div>
+    
+    <header>
+    
+      <a class="uchet-logotype" href="/">
+          <img src="./assets/img/uchet_edu.svg">
+      </a>
+      <div class="uchet-show-more-services">
+        <img src="./assets/img/cubes.svg">
+        Сервисы
+
+        <div>
+          <img src="./assets/img/services/buh.svg" onclick="location.href = 'https://buh.uchet.kz/'">
+          <img src="./assets/img/services/kassa.svg" onclick="location.href = 'https://ukassa.kz/'">
+          <img src="./assets/img/services/edo.svg" onclick="location.href = 'https://edo.uchet.kz/'">
+          <img src="./assets/img/services/edu.svg" onclick="location.href = 'https://profitraining.kz/'">
+          <img src="./assets/img/services/pk.svg" onclick="location.href = 'https://pk.uchet.kz/'">
+          <img src="./assets/img/services/pob.svg" onclick="location.href = 'https://pob.uchet.kz/'">
+          <img src="./assets/img/services/franc.svg" onclick="location.href = 'https://uchet.kz/fran/'">
+          <img src="./assets/img/services/consult.svg" onclick="location.href = 'https://uchet.kz/lp/outsource/'">
+          <img src="./assets/img/services/audit.svg" onclick="location.href = 'https://audit.uchet.kz/'">
+        </div>
+      </div>  
+        
+      <div class="uchet-menu" status="close">
+        <i class="fa-solid fa-bars uchet-menu-burger" onclick="showMenu(this);"></i>
+
+        <menu>
+          <a href="index.html" class="uchet-button uchet-button-active">Главная</a>
+          <a href="one.html" class="uchet-button">Первый тур</a>
+          <a href="two.html" class="uchet-button">Второй тур</a>
+          <a href="index.html" class="uchet-button">Контакты</a>
+        </menu>
+      </div>
+
+    </header>
+</div>
+
+<div id="uchet-content">
+  <nav class="uchet-nav-left">
+    <a href="one.html" class="uchet-button">Первый тур</a>
+    <a href="two.html" class="uchet-button">Второй тур</a>
+  </nav>
+  <div class="uchet-breadcrumb">
+    <ul>
+      <li>
+        <a href="/">Главная</a>  
+      </li>
+      <li>
+        <a href="one.html">Первый тур</a>
+      </li>
+    </ul>
+  </div>
+
+  <div id="uchet-page-content">
+    
+    <h1>
+      До конкурса
+      <span class="uchet-date">03.07.23</span>
+    </h1>
+
+    <div class="uchet-countdown">
+      <div class="uchet-countdown-block">
+        <div class="uchet-number" id="days"></div>
+        <div class="uchet-label">Дней</div>
+      </div>
+      <div class="uchet-countdown-block">
+        <div class="uchet-number" id="hours"></div>
+        <div class="uchet-label">Часов</div>
+      </div>
+      <div class="uchet-countdown-block">
+        <div class="uchet-number" id="minutes"></div>
+        <div class="uchet-label">Минут</div>
+      </div>
+      <div class="uchet-countdown-block">
+        <div class="uchet-number" id="seconds"></div>
+        <div class="uchet-label">Секунд</div>
+      </div>
+    </div>
+
+    <div class="uchet-simple-test-container">
+      <div class="uchet-simple-test-question">
+        Сам впорос будет расположен в этом месте? Самвпоросбудетрасположенвэтомместе? Сам впорос будет расположен в этом месте?
+      </div>
+      <div class="uchet-simple-test-answers">
+
+      </div>
+      <div class="uchet-simple-test-controls">
+        <button class="uchet-button" onclick="backQuestion();">
+          <i class="fa-solid fa-arrow-left"></i>
+        </button>
+        <button class="uchet-button" onclick="nextQuestion();">Ответить на вопрос</button>
+        <button class="uchet-button-warning" onclick="stopTest();">Завершить тест</button>
+        <button class="uchet-button" onclick="nextQuestion();">
+          <i class="fa-solid fa-arrow-right"></i>
+        </button>
+      </div>
+    </div>
+
+  </div>
+
+
+  <nav class="uchet-nav-right">
+    <span class="uchet-button" onclick="showModal();">Принять участие</span>
+    <div class="uchet-members">
+      <img src="./assets/img/users.svg">
+      <span class="uthet-counter">875</span>
+      <span>Зарегистрировались</span>
+      <span class="uchet-eye">
+        <div>
+          <i class="fa-solid fa-eye"></i>
+          <span>2411</span>
+        </div>
+      </span>
+    </div>
+    <div class="uchet-shared">
+      <i class="fa-brands fa-facebook" onclick="location.href = 'https://www.facebook.com/Uchet.kz/'"></i>
+      <i class="fa-brands fa-youtube" onclick="location.href = 'https://www.youtube.com/user/uchetkz/videos'"></i>
+      <i class="fa-brands fa-square-instagram" onclick="location.href = 'https://www.instagram.com/uchet.kz/'"></i>
+      <i class="fa-brands fa-telegram" onclick="location.href = 'https://t.me/uchet_kz'"></i>
+    </div>
+  </nav>
+</div>
+
+<script src="forQuestions.js"></script>
+
+<div class="uchet-modal-container" style="display: none;">
+  <div class="uchet-modal showElement">
+    <div class="uchet-modal-title">
+      <h1>Принять участие в конкурсе</h1>
+      <i class="fa-sharp fa-solid fa-xmark" onclick="showModal()"></i>
+    </div>
+    <div class="uchet-modal-content">
+      Для участия в конкурсе требуется, ничего! Для участия в конкурсе требуется, ничего!
+      Для участия в конкурсе требуется, ничего! Для участия в конкурсе требуется, ничего!
+      Для участия в конкурсе требуется, ничего! Для участия в конкурсе требуется, ничего!
+      <button class="uchet-button">Учавствовать</button>
+    </div>
+  </div>
+</div>
+
+<footer class="uchet-footer">
+<div class="uchet-to-top" onclick="window.scrollTo({top: 0, left: 0, behavior: 'smooth'});">↑</div>
+<div class="uchet-shared">
+  <i class="fa-brands fa-facebook" onclick="location.href = 'https://www.facebook.com/Uchet.kz/'"></i>
+  <i class="fa-brands fa-youtube" onclick="location.href = 'https://www.youtube.com/user/uchetkz/videos'"></i>
+  <i class="fa-brands fa-square-instagram" onclick="location.href = 'https://www.instagram.com/uchet.kz/'"></i>
+  <i class="fa-brands fa-telegram" onclick="location.href = 'https://t.me/uchet_kz'"></i>
+</div>
+<span class="text-muted font-weight-bold">2006 – 2023 ©</span>
+<a href="https://uchet.kz" target="_blank">Учёт™</a>
+</footer>
+
+<script src="./assets/js/main.js"></script>
+
+</body>
+</html>

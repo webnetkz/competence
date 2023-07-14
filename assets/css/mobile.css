@@ -83,11 +83,10 @@
   }
   .uchet-about-icons {
     justify-content: flex-start;
-    align-items: flex-start!important;
+    align-items: flex-start;
     flex-direction: column;
-    position: relative;
-    width: 100vw!important;
-    left: 2.5vw!important;
+    width: 40vw;
+    left: 20vw;
   }
   .uchet-about-icons > div {
     margin-bottom: 1rem;

@@ -71,8 +71,8 @@
 
 <div id="uchet-content">
   <nav class="uchet-nav-left">
-    <a href="contest.html" class="uchet-button">О конкурсе</a>
-    <a href="one.html" class="uchet-button uchet-button-active">Первый тур</a>
+    <a href="contest.html" class="uchet-button uchet-button-active">О конкурсе</a>
+    <a href="one.html" class="uchet-button">Первый тур</a>
     <a href="two.html" class="uchet-button">Второй тур</a>
   </nav>
   <div class="uchet-breadcrumb">
@@ -82,9 +82,6 @@
       </li>
       <li>
         <a href="contest.html">Конкурс 2023</a>
-      </li>
-      <li>
-        <a href="one.html">Первый тур</a>  
       </li>
     </ul>
   </div>
@@ -110,7 +107,6 @@
 
 
   <nav class="uchet-nav-right">
-    <h1>Первый тур</h1>
     <span class="uchet-date">03.07.23</span>
     <div class="uchet-members">
       <img src="./assets/img/users.svg">
@@ -124,7 +120,26 @@
       </span>
     </div>
 
-    <button class="uchet-button-warning" onclick="stopTest();">Завершить тест</button>
+    <div class="uchet-countdown">
+      <div class="uchet-countdown-block">
+        <div class="uchet-number" id="days"></div>
+        <div class="uchet-label">Дней</div>
+      </div>
+      <div class="uchet-countdown-block">
+        <div class="uchet-number" id="hours"></div>
+        <div class="uchet-label">Часов</div>
+      </div>
+      <div class="uchet-countdown-block">
+        <div class="uchet-number" id="minutes"></div>
+        <div class="uchet-label">Минут</div>
+      </div>
+      <div class="uchet-countdown-block">
+        <div class="uchet-number" id="seconds"></div>
+        <div class="uchet-label">Секунд</div>
+      </div>
+    </div>
+
+    <a class="uchet-button uchet-button-attention" onclick="showModal(this)">Принять участие</a>
 
     <div class="uchet-shared">
       <i class="fa-brands fa-facebook" onclick="location.href = 'https://www.facebook.com/Uchet.kz/'"></i>
@@ -152,6 +167,7 @@
     </div>
   </div>
 </div>
+
 <footer class="uchet-footer">
 <div class="uchet-to-top" onclick="window.scrollTo({top: 0, left: 0, behavior: 'smooth'});">↑</div>
 <div class="uchet-shared">

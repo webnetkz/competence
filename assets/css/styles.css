@@ -62,7 +62,7 @@
   border: none;
   border: 0.5px solid var(--main-theme);
 }
-a.uchet-button {
+menu a.uchet-button {
   display: flex;
   align-items: center;
   padding: 5px 15px;
@@ -70,10 +70,9 @@ a.uchet-button {
   margin: 7px 3px;
   min-height: 35px;
   text-decoration: none;
-  color: var(--white);
-  background: var(--main-theme);
-  border: none;
-  border: 0.5px solid var(--main-theme);
+  color: var(--dark);
+  background: rgba(0, 0, 0, 0);
+  border: 0.5px solid rgba(0, 0, 0, 0);
 }
 .uchet-button:hover, .uchet-button-active, .uchet-button-warning:hover {
   background: var(--white)!important;
@@ -81,8 +80,9 @@ a.uchet-button {
   cursor: pointer;
   border: 0.5px solid var(--main-theme);
 }
-.uchet-button-warning {
+.uchet-button-warning, .uchet-button-attention {
   display: flex;
+  justify-content: center;
   align-items: center;
   padding: 5px 15px;
   border-radius: var(--radius);
@@ -92,6 +92,10 @@ a.uchet-button {
   color: var(--white);
   background: var(--red);
   border: none;
+  width: 100%;
+}
+.uchet-button-attention {
+  background: orange!important;
 }
 .uchet-button-warning:hover {
   background: var(--red-light);
@@ -176,6 +180,30 @@ a.uchet-button {
   padding: 5px 15px;
   width: 200px;
 }
+.uchet-dropdown {
+  position: relative;
+}
+.uchet-dropdown:hover {
+  background: var(--main-theme-light);
+  cursor: pointer;
+}
+.uchet-dropdown > div {
+  display: none;
+  position: absolute;
+  top: 34px;
+  left: 0px;
+  background: var(--white);
+  border-radius: var(--radius);
+  padding: 5px 15px;
+  box-shadow: 0 0 10px rgba(0, 0, 0, 0.25);
+  z-index: 999;
+}
+.uchet-dropdown > div button {
+  min-width: 150px;
+}
+.uchet-dropdown:hover  div {
+  display: block;
+}
 .uchet-show-more-services {
   display: flex;
   position: absolute!important;
@@ -196,7 +224,7 @@ a.uchet-button {
 .uchet-show-more-services:hover  div {
   display: block
 }
-.uchet-show-more-services > div {
+.uchet-show-more-services > div, .uchet-dropdown > div {
   display: none;
   position: absolute;
   top: 34px;
@@ -396,6 +424,28 @@ a.uchet-button {
   width: calc(100vw - 600px);
   min-height: 300px;
 }
+.uchet-container {
+  display: flex;
+  flex-direction: column;
+  align-items: flex-start;
+  justify-content: space-between;
+  background: var(--white);
+  border-radius: var(--radius);
+  border: 1px solid var(--border-color);
+  box-shadow: var(--box-shadow);
+  width: calc(100vw - 600px);
+  min-height: 300px;
+  padding: 30px 60px;
+}
+.uchet-container h1, h2 {
+  margin-bottom: 2rem;
+  margin-top: 1rem;
+  border-bottom: 1px solid rgba(0, 0, 0, 0.1);
+  padding-bottom: 0.5rem;
+}
+.uchet-container h3 {
+  margin: 1rem;
+}
 .uchet-simple-test-container > div {
   padding: 10px;
   width: 100%;
@@ -429,6 +479,9 @@ a.uchet-button {
   backdrop-filter: blur(5px);
   color: var(--dark);
   z-index: 999999999;
+}
+.uchet-modal-container p {
+  padding: 0.5rem 1.5rem;
 }
 .uchet-modal {
   width: 60vw;
@@ -564,18 +617,18 @@ a.uchet-button {
 margin-bottom: 2rem;
 }
 .uchet-about-icons {
-display: flex;
-justify-content: space-between;
-position: relative;
-align-items: center;
-width: 60vw;
-left: 20vw;
-margin-top: 2rem;
+  display: flex;
+  justify-content: space-between;
+  position: relative;
+  align-items: center;
+  width: 60vw;
+  left: 20vw;
+  margin-top: 2rem;
 }
 .uchet-about-icons > div {
-display: flex;
-align-items: center;
-justify-content: space-between;
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
 }
 .uchet-about-icons > div > div {
 display: flex;

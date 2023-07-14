@@ -30,11 +30,15 @@ function clearQuestion()
     let questionContainer = document.querySelector('.uchet-simple-test-question');
     let answersContainer = document.querySelector('.uchet-simple-test-answers');
 
-    questionContainer.inneText = '';
+    if(answersContainer)
+    {
+        questionContainer.inneText = '';
 
-    while (answersContainer.firstChild) {
-        answersContainer.removeChild(answersContainer.firstChild);
+        while (answersContainer.firstChild) {
+            answersContainer.removeChild(answersContainer.firstChild);
+        }
     }
+
 
     return {qustion: questionContainer, answer: answersContainer}
 }
@@ -82,14 +86,17 @@ function backQuestion()
 
 function stopTest()
 {
-    document.querySelector('.uchet-simple-test-container').innerHTML = `
-        <div class="uchet-statistics">
-            <div class="uchet-total-questions">Общее количество вопросов: <span id="uchet-total-questions">333</span></div>
-            <div class="uchet-correct-answers">Правильные ответы: <span id="uchet-correct-answers">333</span></div>
-            <div class="uchet-incorrect-answers">Неправильные ответы: <span id="uchet-incorrect-answers">0</span></div>
-            <div class="uchet-time-answers">Затраченное время: <span id="uchet-time-answers">12:01</span></div>
-        </div>
-    `;
+    if(document.querySelector('.uchet-simple-test-container'))
+    {
+        document.querySelector('.uchet-simple-test-container').innerHTML = `
+            <div class="uchet-statistics">
+                <div class="uchet-total-questions">Общее количество вопросов: <span id="uchet-total-questions">333</span></div>
+                <div class="uchet-correct-answers">Правильные ответы: <span id="uchet-correct-answers">333</span></div>
+                <div class="uchet-incorrect-answers">Неправильные ответы: <span id="uchet-incorrect-answers">0</span></div>
+                <div class="uchet-time-answers">Затраченное время: <span id="uchet-time-answers">12:01</span></div>
+            </div>
+        `;
+    }
 }
 
 window.question = 1;

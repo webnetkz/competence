@@ -703,3 +703,25 @@ align-items: flex-start;
   margin-bottom: 2rem;
   margin-top: 1rem;
 }
+.uchet-mini-message {
+  position: fixed;
+  bottom: 20px;
+  right: 20px;
+  min-width: 300px;
+  min-height: 70px;
+  padding: 5px;
+  padding-top: 15px;
+  border: 1px solid var(--gray);
+  box-shadow: 0 0 10px rgba(0,0,0,0.4);
+  border-radius: 12px;
+  display: flex;
+  justify-content: flex-start;
+  align-items: center;
+  z-index: 999;
+  background: var(--white);
+}
+.uchet-mini-message > i {
+  position: absolute;
+  top: 5px;
+  right: 5px;
+}

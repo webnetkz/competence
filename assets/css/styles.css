@@ -248,7 +248,7 @@ menu a.uchet-button {
   align-items: center;
   justify-content: space-between;
 } 
-.uchet-breadcrumb {
+.uchet-breadcrumb, .uchet-breadcrumb-full {
   display: flex;
   position: relative;
   top: 10px;
@@ -258,39 +258,42 @@ menu a.uchet-button {
   margin-left: 300px;
   margin-right: 300px;
   border-radius: var(--radius);
-  width: calc(100vw - 600px);
+  width: calc(100vw - 310px);
   border-color: var(--border-color);
   box-shadow: var(--box-shadow);
   animation: showFromTop 0.8s 0.3s linear;
 }
-.uchet-breadcrumb ul {
+.uchet-breadcrumb-full {
+  margin-left: 10px;
+}
+.uchet-breadcrumb ul, .uchet-breadcrumb-full ul {
   display: flex;
   padding: 4.5px 6.55px;
   align-items: flex-end;
   gap: 16.06px;
   list-style: none;
 }
-.uchet-breadcrumb ul li {
+.uchet-breadcrumb ul li, .uchet-breadcrumb-full ul li{
   color: var(--main-theme);
   display: flex;
   align-items: flex-end;
 }
-.uchet-breadcrumb ul li:first-child a {
+.uchet-breadcrumb ul li:first-child a, .uchet-breadcrumb-full ul li:first-child a {
   color: var(--dark);
   font-weight: 600;
 }
-.uchet-breadcrumb ul li::after {
+.uchet-breadcrumb ul li::after, .uchet-breadcrumb-full ul li::after {
   content: "\2192";
   margin-left: 10px;
   margin-top: -10px;
   font-size: 1.5rem;
   color: var(--main-theme) 
 }
-.uchet-breadcrumb ul li:last-child::after {
+.uchet-breadcrumb ul li:last-child::after, .uchet-breadcrumb-full ul li:last-child::after {
   content: "";
   margin-left: 0;
 }
-.uchet-breadcrumb a {
+.uchet-breadcrumb a, .uchet-breadcrumb-full a {
   padding: 3px 8px;
   border-radius: var(--radius);
   color: var(--main-theme);
